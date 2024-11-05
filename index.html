@@ -22,6 +22,8 @@
             <input type="text" id="LB">
         </form>
 
+        <div  class="hsl" id="hasil">Hasil</div>
+
       </div>
       <div class="cardfooter">
         <button class="btn1" onclick="hitung()">Hitung</button>
@@ -35,7 +37,15 @@
     var pj = document.getElementById("PJ").value;
     var lb = document.getElementById("LB").value;
     var luas = pj * lb;
-    console.log(luas);
+    var res ="hitung luas persegi<br>Nilai Panjang "+pj+",dan lebarnya "+lb+" menjadi:<br>luas = panjang x lebar<br>luas ="+pj+" X "+lb+"<br>luas = "+luas;
+    var kll = 2 * (pj + lb);
+    res += "<br><br>keliling persegi <br>keliling= 2X (panjang+lebar)"
+    res += "<br>keliling= 2X ("+pj+"+"+lb+")"
+    var pjlb =pj+lb
+    res += "<br>keliling= 2 X "+pjlb
+    res += "<br>keliling= 2X "+kll 
+
+    document.getElementById("hasil").innerHTML = res;
   }
 </script>
 
